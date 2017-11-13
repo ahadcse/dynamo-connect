@@ -9,7 +9,7 @@ const dynamoDB = new AWS.DynamoDB.DocumentClient({region: 'eu-west-1'});
 
 function getDeviceDataFromUserid(id) {
     var params = {
-        TableName: 'person',
+        TableName: 'user',
         Key: {"id": id}
     };
     return dynamoDB.get(params).promise()
